@@ -63,7 +63,97 @@
       rel="stylesheet"
       type="text/css"
     />
+ <style>
+  
 
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+thead th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+td{
+    color:black;
+}
+.header-service {
+    background-color: #007bff;
+    color: white;
+}
+
+.header-economy {
+    background-color: #ff4b4b;
+    color: white;
+}
+
+.header-premium {
+    background-color: #ff8000;
+    color: white;
+}
+
+.header-ultimate {
+    background-color: #8000ff;
+    color: white;
+}
+
+tbody td, tbody th {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.category {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.packages td {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #333;
+    color:white;
+}
+
+.packages td:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+            th {
+                font-size: 16px;
+            }
+        }
+
+ </style>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -114,8 +204,8 @@
 								<ul>
 		                            <li><a href="about.html">About Us</a></li>
 		                            <li><a href="service.html">Services</a></li>
-		                            <li class="active"><a href="career.html">Career</a></li>
-		                             <li><a href="media.html">Media</a></li>
+		                            <li ><a href="career.html">Career</a></li>
+		                             <li ><a href="media.html">Media</a></li>
 		                            <!-- <li><a href="faq.html">Faq</a></li>  -->
 		                        </ul>
 	                    	</div>
@@ -139,25 +229,25 @@
 							  </ul> -->
 							</div>
 						  </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pricing  <i class="fa fa-angle-down"></i></a>
-                <!-- <a href="portfolio-item.html" 
-                  >Portfolio <i class="fa fa-angle-down"></i
-                ></a> -->
-                <div class="dropdown-menu">
-                  <ul>
-                  <li>
-                  <a href="individual.html">Individual</a>
-                  </li>
-                  <li>
-                  <a href="startup.html">Start-Up</a>
-                  </li>
-                  <li>
-                  <a href="enterprice.html">Enterprice</a>
-                  </li>
-                  </ul>
-                </div>
-                </li>
+                          <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pricing  <i class="fa fa-angle-down"></i></a>
+							<!-- <a href="portfolio-item.html" 
+							  >Portfolio <i class="fa fa-angle-down"></i
+							></a> -->
+							<div class="dropdown-menu">
+							  <ul>
+							  <li>
+								<a href="individual.html">Individual</a>
+							  </li>
+							  <li>
+								<a href="startup.html">Start-Up</a>
+							  </li>
+							  <li>
+								<a href="enterprice.html">Enterprice</a>
+							  </li>
+							  </ul>
+							</div>
+							</li>
 	                    <!-- <li class="dropdown">
                        		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                        		<div class="dropdown-menu">
@@ -202,11 +292,11 @@
         <!-- Subpage title start -->
         <div class="banner-title-content">
           <div class="text-center">
-            <h2>Career</h2>
+            <h2> Start-Up Pricing</h2>
             <ul class="breadcrumb">
               <li>Home</li>
-              <li>Company</li>
-              <li><a href="#"> Career</a></li>
+              <li>Pricing</li>
+              <li><a href="#">Start-Up</a></li>
             </ul>
           </div>
         </div>
@@ -214,335 +304,165 @@
       </div>
       <!-- Banner area end -->
 
-      <!-- Main container start -->
-
-      <section id="main-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-              <h3 class="title-border">Career</h3>
-              <p>
-				Join our team of dedicated professionals. Explore exciting career opportunities and grow with
-				us. At Hark, we value creativity, collaboration, and commitment to excellence. We offer a
-				dynamic work environment where your ideas are valued, and your growth is nurtured.
-				Whether you are an experienced professional or a fresh graduate, we have opportunities that
-				will challenge and inspire you. Become part of a team that drives innovation and makes a
-				difference in the digital marketing landscape.
-				
-              </p>
-
-              <div>
-                <div >
-                  <!-- <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordionA, #accordionB"
-                        href="#collapseOne"
-                        >Job Requirements</a
-                      >
-                    </h4>
-                  </div> -->
-                  <div>
-                    <!-- <div class="panel-body">
-                      <ul class="unstyled arrow">
-                        <li>B.Sc. from any reputed university</li>
-                        <li>
-                          MBA in Marketing from any reputed university is very
-                          much desired
-                        </li>
-                        <li>
-                          Two (02) years of experience in Software Company is an
-                          advantage.
-                        </li>
-                        <li>
-                          Experience as Business Analyst will be an added
-                          advantage
-                        </li>
-                        <li>Manage and execute lead generation activities.</li>
-                        <li>
-                          Help building marketing strategy, tool and approach by
-                          thorough research
-                        </li>
-                      </ul>
-                    </div> -->
-                  </div>
-                </div>
-                <!--/ Panel 1 end-->
-
-                <div>
-                  <div >
-                    <!-- <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        class="collapsed"
-                        data-parent="#accordionA, #accordionB"
-                        href="#collapseTwo"
-                      >
-                        Job Responsibilities</a
-                      >
-                    </h4> -->
-                  </div>
-                  <div >
-                    <!-- <div class="panel-body">
-                      <ul class="unstyled arrow">
-                        <li>
-                          Global Business Development &amp; Strategic Account
-                          Management
-                        </li>
-                        <li>Marketing Research</li>
-                        <li>Marketing Collaterals development</li>
-                        <li>Business Analysis</li>
-                        <li>Manage and execute lead generation activities.</li>
-                        <li>
-                          Help building marketing strategy, tool and approach by
-                          thorough research
-                        </li>
-                      </ul>
-                    </div> -->
-                  </div>
-                </div>
-                <!--/ Panel 2 end-->
-
-                <div>
-                  <!-- <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        class="collapsed"
-                        data-parent="#accordionA, #accordionB"
-                        href="#collapseThree"
-                      >
-                        What’s in it for you?</a
-                      >
-                    </h4>
-                  </div> -->
-                  <div id="collapseThree" class="panel-collapse collapse">
-                    <!-- <div class="panel-body">
-                      <ul class="unstyled arrow">
-                        <li>
-                          Very Competitive Salary and Long Term Benefits with
-                          Excellent Career Opportunity in a Focused &amp; Stable
-                          organization.
-                        </li>
-                        <li>Training on new technology.</li>
-                        <li>
-                          Overseas Tour with Opportunity to work with Global
-                          Companies.
-                        </li>
-                        <li>
-                          Most importantly a friendly work environment with
-                          opportunity to learn from a number of highly skilled
-                          mentors.
-                        </li>
-                      </ul>
-                    </div> -->
-                  </div>
-                </div>
-                <!--/ Panel 3 end-->
-
-                <div class="gap-20"></div>
-
-                <!-- <p>
-                  <a href="#" class="btn btn-primary solid"
-                    >Apply Now <i class="fa fa-long-arrow-right"></i
-                  ></a>
-                </p> -->
-              </div>
-              <!--/ Accordion end -->
-
-              <!--/ 1st career end -->
-
-              <div class="gap-40"></div>
-
-              <!-- <h3 class="title-border">Assistent Manager (P&amp;L)</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
-                natus voluptatibus adipisci porro magni dolore eos eius ducimus
-                corporis quos perspiciatis quis iste, vitae autem libero ullam
-                omnis cupiditate quam.
-              </p> -->
-
-              <!-- <div class="panel-group" id="accordionB">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordionA, #accordionB"
-                        href="#collapseA"
-                        >Job Requirements</a
-                      >
-                    </h4>
-                  </div>
-                  <div id="collapseA" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                      <ul class="unstyled arrow">
-                        <li>B.Sc. from any reputed university</li>
-                        <li>
-                          MBA in Marketing from any reputed university is very
-                          much desired
-                        </li>
-                        <li>
-                          Two (02) years of experience in Software Company is an
-                          advantage.
-                        </li>
-                        <li>
-                          Experience as Business Analyst will be an added
-                          advantage
-                        </li>
-                        <li>Manage and execute lead generation activities.</li>
-                        <li>
-                          Help building marketing strategy, tool and approach by
-                          thorough research
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-                <!--/ Panel 1 end-->
-
-                <!-- <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        class="collapsed"
-                        data-parent="#accordionA, #accordionB"
-                        href="#collapseB"
-                      >
-                        Job Responsibilities</a
-                      >
-                    </h4>
-                  </div>
-                  <div id="collapseB" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <ul class="unstyled arrow">
-                        <li>
-                          Global Business Development &amp; Strategic Account
-                          Management
-                        </li>
-                        <li>Marketing Research</li>
-                        <li>Marketing Collaterals development</li>
-                        <li>Business Analysis</li>
-                        <li>Manage and execute lead generation activities.</li>
-                        <li>
-                          Help building marketing strategy, tool and approach by
-                          thorough research
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-                <!--/ Panel 2 end-->
-
-                <!-- <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        class="collapsed"
-                        data-parent="#accordionA, #accordionB"
-                        href="#collapseC"
-                      >
-                        What’s in it for you?</a
-                      >
-                    </h4>
-                  </div> -->
-                  <!-- <div id="collapseC" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <ul class="unstyled arrow">
-                        <li>
-                          Very Competitive Salary and Long Term Benefits with
-                          Excellent Career Opportunity in a Focused &amp; Stable
-                          organization.
-                        </li>
-                        <li>Training on new technology.</li>
-                        <li>
-                          Overseas Tour with Opportunity to work with Global
-                          Companies.
-                        </li>
-                        <li>
-                          Most importantly a friendly work environment with
-                          opportunity to learn from a number of highly skilled
-                          mentors.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-                <!--/ Panel 3 end-->
-
-                <div class="gap-20"></div>
-
-                <!-- <p>
-                  <a href="#" class="btn btn-primary solid"
-                    >Apply Now <i class="fa fa-long-arrow-right"></i
-                  ></a>
-                </p>
-              </div> -->
-              <!--/ Accordion end -->
-            </div>
-            <!--/ Content col end -->
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-top: 20px; ">
-              <div class="sidebar sidebar-right">
-                <!-- category start -->
-                <div class="widget widget-categories">
-                  <h3 >How to Apply</h3>
-                  <p>
-                    Send your cv, relevant work experience and anything else
-                    that will make you stand out to info@harkitsolutions.com
-                  </p>
-                </div>
-                <!-- category end -->
-
-                <!-- tags start -->
-                <div class="widget widget-tags">
-                  <h3>Why Us</h3>
-                  <p>
-                    We are an award-winning company dedicated to excellence. Our
-                    expertise and innovative solutions set us apart, ensuring we
-                    deliver exceptional results for our clients. Trust us to
-                    bring your vision to life with our proven track record and
-                    commitment to quality.
-                  </p>
-                </div>
-				
-                <!-- tags end -->
-              </div>
-			 
-              <!--/ Sidebar end -->
-            </div>
-			<!-- <h3  style="border-bottom: 2px solid red; width:800px; ">Media</h3>
-			<p style="width:800px">
-				Stay tuned for the latest updates, case studies, and success stories from our projects. Our
-media section will keep you informed about the innovative strategies we implement, the
-milestones we achieve, and the impact we create for our clients. Discover in-depth articles,
-engaging videos, and insightful infographics that highlight our journey and success stories.
-			</p> -->
-            <!--/ Sidebar col end -->
-          </div>
-          <!--/ row end -->
-        </div>
-	
-        <!--/ container end -->
-      </section>
-      <!--/ Main container end -->
-	  
-
-      <!-- <section class="call-to-action">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h3>Join with BizCraft and Give Your Website a Brand New Look</h3>
-              <a href="#" class="pull-right btn btn-primary white"
-                >Purchase Now</a
-              >
-            </div>
-          </div>
-        </div>
-      </section> -->
+    <section>
+      <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="header-service">SERVICES</th>
+                    <th class="header-economy">ECONOMY</th>
+                    <th class="header-premium">PREMIUM</th>
+                    <th class="header-ultimate">ULTIMATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category" colspan="4">WEBSITE DESIGNING</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Website creation</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Maintenance</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Content Support/writing</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM"></td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Appointment Integration</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td class="category" colspan="4">SEO</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Local Keywords</td>
+                    <td data-label="ECONOMY">YES <br> (5 Keywords)</td>
+                    <td data-label="PREMIUM">YES <br> (11 Keywords)</td>
+                    <td data-label="ULTIMATE">YES <br> (16 Keywords)</td>
+                </tr>
+                <tr>
+                    <td class="category" colspan="4">GOOGLE MY BUSINESS</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">GMB Listing</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td class="category" colspan="4">SOCIAL MEDIA PAGE CREATION</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Facebook</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">YouTube</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Instagram</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">LinkedIn</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE"></td>
+                </tr>
+                <tr>
+                    <td class="category" colspan="4">GRAPHIC DESIGNING</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Logo Design</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Brochure Design</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM"></td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Catalogue Design</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM"></td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Stationary Design</td>
+                    <td data-label="ECONOMY">YES <br> (3 Posts)</td>
+                    <td data-label="PREMIUM">YES <br> (5 Posts)</td>
+                    <td data-label="ULTIMATE">YES <br> (8 Posts)</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Leaflet Design</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM">YES <br> (3 Posts)</td>
+                    <td data-label="ULTIMATE">YES  <br>(6 Posts)</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Banners</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM"></td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Hoardings</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM"></td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td class="category" colspan="4">ANALYSIS REPORT</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Analysis Report</td>
+                    <td data-label="ECONOMY">YES</td>
+                    <td data-label="PREMIUM">YES</td>
+                    <td data-label="ULTIMATE">YES</td>
+                </tr>
+                <tr>
+                    <td class="category" colspan="4">CAMPAIGNS (FB & INSTA)</td>
+                </tr>
+                <tr>
+                    <td data-label="SERVICES">Campaigns (FB & INSTA)</td>
+                    <td data-label="ECONOMY"></td>
+                    <td data-label="PREMIUM"></td>
+                    <td data-label="ULTIMATE">YES <br> (2)</td>
+                </tr>
+                <tr class="packages">
+                    <td data-label="SERVICES">PACKAGES</td>
+                    <td data-label="ECONOMY">20,000</td>
+                    <td data-label="PREMIUM">46,000</td>
+                    <td data-label="ULTIMATE">65,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+      
+      
  <!-- Footer start -->
  <footer id="footer" class="footer">
   <div class="container">
