@@ -126,7 +126,7 @@ ul.navbar-nav > li.active > a{
 }
 
 .navbar-toggle{
-	background: #ee3b24;
+	/* background: #ee3b24; */
 }
 
 .dropdown-menu > ul > li.active > a{

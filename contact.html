@@ -19,7 +19,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
 	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
-	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<!-- CSS
 	================================================== -->
 	
@@ -61,18 +61,107 @@
 })();
 </script>
 <script>
-	function sendMail(){
-let parms = {
-name: document.getElementById("name").value,
-email: document.getElementById("email").value,
-subject: document.getElementById("subject").value,
-message: document.getElementById("message").value,
+	function sendMail() {
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("number").value,
+        message: document.getElementById("message").value,
+    };
+
+    // Show a loading popup immediately
+    Swal.fire({
+        title: 'Sending...',
+        text: 'Please wait while we send your message.',
+        icon: 'info',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+    emailjs.send("service_wut7imc", "template_0r1zzhd", params)
+        .then(function(response) {
+            // Update the popup to show success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Email Sent!',
+                text: 'Your message has been sent successfully.',
+                showConfirmButton: false,
+                timer: 1500
+            });
+
+            // Reset form fields
+            document.getElementById("contact-form").reset();
+        })
+        .catch(function(error) {
+            // Update the popup to show error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong. Please try again.',
+            });
+        });
 }
-emailjs.send("service_wut7imc","template_0r1zzhd", parms).then(alert("Email Sent"));
-	}
+
+	
+
+
 </script>
 </head>
-	
+	<style>
+		/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bars {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1000; /* Ensure this value is higher than other elements */
+  right: 0;
+}
+
+/* Style the icon bar links */
+.icon-bars a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bars a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #30ff01;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+	</style>
 <body>
 	<div class="body-inner">
 	<!-- Header start -->
@@ -225,21 +314,19 @@ emailjs.send("service_wut7imc","template_0r1zzhd", parms).then(alert("Email Sent
 							<div class="col-md-4">
 								<div class="form-group">
 									<label>Name</label>
-								<input class="form-control" name="name" id="name" placeholder="" type="text" required>
+									<input class="form-control" name="name" id="name" placeholder="" type="text" required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label>Email</label>
-									<input class="form-control" name="email" id="email" 
-									placeholder="" type="email" required>
+									<input class="form-control" name="email" id="email" placeholder="" type="email" required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Subject</label>
-									<input class="form-control" name="subject" id="subject" 
-									placeholder="" required>
+									<label>Mobile Number</label>
+									<input class="form-control" name="number" id="number" type="tel" placeholder="" required>
 								</div>
 							</div>
 						</div>
@@ -248,10 +335,10 @@ emailjs.send("service_wut7imc","template_0r1zzhd", parms).then(alert("Email Sent
 							<textarea class="form-control" name="message" id="message" placeholder="" rows="10" required></textarea>
 						</div>
 						<div class="text-right"><br>
-							<button class="btn btn-primary solid blank" type="button" onclick="sendMail()">Send Message</button> 
-
+							<button class="btn btn-primary solid blank" type="submit">Send Message</button> 
 						</div>
 					</form>
+					
 	    		</div>
 	    		<div class="col-md-5">
 	    			<div class="contact-info">
@@ -443,9 +530,10 @@ emailjs.send("service_wut7imc","template_0r1zzhd", parms).then(alert("Email Sent
 					</div>
 			  <div class="row">
 				<div class="col-md-12 text-center">
-				  <div class="copyright-info">
-					© Copyright 2024 - All Rights Reserved
-				  </div>
+					<div class="copyright-info">
+						HARK - Digital Marketing Agency &#169; 2024 Website Developed & Maintenance By
+						<a href="https://www.booleanbraintechnologies.com" style="color:#dd4b39" target="_blank"> Boolean Brain Technologies</a>
+					  </div>
 				</div>
 			  </div>
 			  <!--/ Row end -->
@@ -463,6 +551,13 @@ emailjs.send("service_wut7imc","template_0r1zzhd", parms).then(alert("Email Sent
 			<!--/ Container end -->
 		  </section>
 		  <!--/ Copyright end -->
+		  <div class="icon-bars">
+			<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+			<a href="#" class="twitter"><i class="fa fa-whatsapp"></i></a>
+			<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+			<a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+			<a href="#" class="google"><i class="fa fa-instagram"></i></a>
+		  </div>
 	<!-- Javascript Files
 	================================================== -->
 

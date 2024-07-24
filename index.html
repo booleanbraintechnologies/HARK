@@ -19,6 +19,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
 	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<!-- CSS
 	================================================== -->
@@ -88,6 +89,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+
 }
 
 .team:hover .team-content {
@@ -132,7 +134,7 @@
 
 /* Title Styling */
 .title-icon, .title {
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -153,10 +155,11 @@
 .isotope-nav ul {
     list-style: none;
     padding: 0;
+	margin-top: 15px;
 }
 
 .isotope-nav ul li {
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 10px;
 }
 
@@ -238,6 +241,55 @@
 }
 
 
+.icon-bars {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1000; /* Ensure this value is higher than other elements */
+  right: 0;
+}
+
+/* Style the icon bar links */
+.icon-bars a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bars a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #30ff01;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
 </style>
 </head>
 	
@@ -259,7 +311,7 @@
 		<a class="btn btn-sm btn-primary close-styler pull-right">Close X</a>
 	</div> -->
 	<!-- Style switcher end -->
-
+	
 	<div class="body-inner">
 
 	<!-- Header start -->
@@ -398,8 +450,9 @@
 						<p>Embracing cutting-edge trends and technologies to stay ahead of the
 							curve.
 							</p>
-						<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
-						<a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>
+						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch
+						</a>
+						<!-- <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a> -->
 					</div> <!-- .cd-full-width -->
 				</li>
 				<li>
@@ -410,7 +463,7 @@
 						<h2>How Big Can You Dream?</h2>
 						<p>Pursuing perfection in every facet of our work!!
 						</p>
-						<a href="#0" class="cd-btn btn btn-primary solid">Take a Tour</a>
+						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
 					</div> <!-- .cd-half-width -->
 
 					<!-- <div class="cd-half-width cd-img-container " >
@@ -430,8 +483,7 @@
 						<p>Partnering closely with clients to understand their goals and
 							challenges.
 							</p>
-						<a href="#0" class="cd-btn btn btn-primary white">Start</a>
-						<a href="#0" class="cd-btn btn secondary btn-primary solid">Learn More</a>
+							<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
 					</div> <!-- .cd-half-width -->
 				</li>
 				<li class="selected">
@@ -442,8 +494,7 @@
 						<h2>WE ARE HERE TO MAKE IT HAPPEN</h2>
 						<p>Designing unique solutions that captivate and engage.
 						</p>
-						<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
-						<a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>
+						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
 					</div> <!-- .cd-full-width -->
 				</li>
 			
@@ -471,7 +522,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 heading">
-					<span class="title-icon pull-left"><i class="fa fa-cogs"></i></span>
+					<span class="title-icon "><i class="fa fa-cogs"></i></span>
 					<h2 class="title">Industries with our Quality Experience Team 
 						<!-- <span class="title-desc">A Quality Experience Team with Extensive Experience</span> -->
 					</h2>
@@ -524,7 +575,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 heading">
-					<span class="title-icon classic pull-left"><i class="fa fa-suitcase"></i></span>
+					<span class="title-icon "><i class="fa fa-suitcase"></i></span>
 					<h2 class="title classic">Our Awesome Work</h2>
 				</div>
 			</div> <!-- Title row end -->
@@ -842,6 +893,54 @@
 			height:120px;
 			object-fit: cover;
 		}
+
+
+		.team {
+    margin-bottom: 30px;
+}
+
+.img-rectangle {
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.img-rectangle img {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.team-content {
+    margin-top: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .col-sm-6 {
+        width: 50%;
+    }
+	
+}
+
+@media (max-width: 576px) {
+    .col-sm-6 {
+        width: 100%;
+    }
+	
+}
+@media (max-width: 540px) {
+    .col-xs-12 {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+}
+
 		</style>
 		
 		<div class="gap-40"></div>
@@ -850,7 +949,7 @@
   
 			<div class="row">
 			  <div class="col-md-12 heading">
-				<span class="title-icon classic pull-left"
+				<span class="title-icon "
 				  ><i class="fa fa-cogs"></i
 				></span>
 				<h2 class="title classic">Our Services</h2>
@@ -1033,8 +1132,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 heading">
-					<span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
-					<h2 class="title" style="margin-right: 800px;">Meet Our Partners <span class="title-desc"></span></h2>
+					<span class="title-icon "><i class="fa fa-weixin"></i></span>
+					<h2 class="title ">Meet Our Partners <span class="title-desc"></span></h2>
 				</div>
 			</div><!-- Title row end -->
 			<div class="row text-center">
@@ -1043,7 +1142,7 @@
 						<div class="img-rectangle">
 							<img src="images/team/BBT.png" alt="Boolean Brain Technologies">
 						</div>
-						<div class="team-content">
+						<div class="team-content ">
 							<h3>BBT</h3>
 						</div>
 					</div>	
@@ -1074,7 +1173,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInRight">
 						<div class="img-rectangle">
-							<img src="images/team/YUVA.png" alt="Yuvasanyuktha">
+							<img src="images/team/YUVA.png"  class="special"  alt="Yuvasanyuktha" style="height: max-content; margin-top: -25px;">
 						</div>
 						<div class="team-content">
 							<h3>Yuvasanyuktha</h3>
@@ -1107,7 +1206,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInRight">
 						<div class="img-rectangle">
-							<img src="images/team/UniWorks.png" alt="Uniworks" style="height:60px; width:200px; top:100px">
+							<img src="images/team/UniWorks.png" alt="Uniworks" >
 						</div>
 						<div class="team-content">
 							<h3>Uniworks</h3>
@@ -1309,7 +1408,7 @@
 		</div>
 	</section>
 	 -->
-
+	
 	 <!-- Footer start -->
 	 <footer id="footer" class="footer">
         <div class="container">
@@ -1480,9 +1579,10 @@
 				</div>
           <div class="row">
             <div class="col-md-12 text-center">
-              <div class="copyright-info">
-                © Copyright 2024 - All Rights Reserved
-              </div>
+				<div class="copyright-info">
+					HARK - Digital Marketing Agency &#169; 2024 Website Developed & Maintenance By
+					<a href="https://www.booleanbraintechnologies.com" style="color:#dd4b39" target="_blank"> Boolean Brain Technologies</a>
+				  </div>
             </div>
           </div>
           <!--/ Row end -->
@@ -1500,6 +1600,13 @@
         <!--/ Container end -->
       </section>
       <!--/ Copyright end -->
+	  <div class="icon-bars">
+		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="twitter"><i class="fa fa-whatsapp"></i></a>
+		<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		<a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+		<a href="#" class="google"><i class="fa fa-instagram"></i></a>
+	  </div>
 
 	<!-- Javascript Files
 	================================================== -->

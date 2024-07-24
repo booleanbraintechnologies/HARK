@@ -55,19 +55,158 @@
     <![endif]-->
 
 	<style>
+		/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bars {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1000; /* Ensure this value is higher than other elements */
+  right: 0;
+}
+
+/* Style the icon bar links */
+.icon-bars a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bars a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #30ff01;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
     .project-item {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .project-item img {
-        max-width: 650px; /* Adjust the width as needed */
+    /* .project-item img {
+        max-width: 650px; 
+		
         margin-bottom: 10px;
 		max-height: 300px;
-    }
+		
+    } */
     .project-content {
         text-align: center;
     }
+	.flexslider {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.flexslider .slides {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexslider .slides li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.flexslider .slides img {
+    width: 550px;
+     height: 300px;
+    border-radius: 20px;
+	border: 5px solid #d72e2e;
+    display: block;
+    margin: 0 auto;
+	object-fit: cover;
+}
+img:hover {
+  box-shadow: 0 0 5px 5px rgba(0, 3, 4, 0.5);
+}
+
+.flexslider .flex-prev, .flexslider .flex-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.flexslider .flex-prev {
+    left: 10px;
+}
+
+.flexslider .flex-next {
+    right: 10px;
+}
+
+.flex-prev:hover, .flex-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.custom-navigation a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.custom-navigation a:hover {
+    background-color: #333;
+}
+@media (max-width: 620px) {
+	.flexslider .slides img
+	{
+		height:300px;
+		width: 300px;
+	}
+} 
 
 </style>
 </head>
@@ -253,118 +392,96 @@
         <!-- </div> -->
 
         <!-- Additional Project slider start -->
-        <div class="row" >
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-slider">
-                    <div class="flexproject flexslider">
-                        <ul class="slides">
-                            <li> 
-								<h3 style="text-align: center; justify-content: center;">Meta Verified WhatsApp API</h3>
-                                <div class="project-item">
-									
-                                    <img src="images/portfolio/api.jpeg" alt="">
-                                    
-                                    <p style="text-align: center; justify-content: center; margin-top: 35px;">Unlock the full potential of your communication with our Meta Verified WhatsApp API. This
-										product is designed to enhance your business interactions, ensuring efficiency and
-										personalization in every message you send.
-									   </p>
-                                    <h1>Features</h1>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="project-slider">
+					<div class="flexproject flexslider">
+						<ul class="slides">
+							<li>
+								<h3 style="text-align: center;">Meta Verified WhatsApp API</h3>
+								<div class="project-item">
+									<img src="images/portfolio/api.jpeg" alt="Meta Verified WhatsApp API">
+									<p style="text-align: center; margin-top: 35px;">
+										Unlock the full potential of your communication with our Meta Verified WhatsApp API. This product is designed to enhance your business interactions, ensuring efficiency and personalization in every message you send.
+									</p>
+									<h1>Features</h1>
 									<p>
-										<strong>• Multiple User Access:</strong> Allow multiple users to access and manage the WhatsApp API
-										simultaneously, improving team collaboration.<br>
-										<strong>• Send Photos, Files, Documents, PDFs:</strong> Share various types of media and documents easily
-										with your contacts.<br>
-										<strong>• Send Personalized Messages:</strong> Customize your messages to fit the needs of each recipient,
-										enhancing customer engagement.<br>
+										<strong>• Multiple User Access:</strong> Allow multiple users to access and manage the WhatsApp API simultaneously, improving team collaboration.<br>
+										<strong>• Send Photos, Files, Documents, PDFs:</strong> Share various types of media and documents easily with your contacts.<br>
+										<strong>• Send Personalized Messages:</strong> Customize your messages to fit the needs of each recipient, enhancing customer engagement.<br>
 										<strong>• Add Multiple Accounts:</strong> Manage multiple WhatsApp accounts from a single interface.<br>
 										<strong>• Auto Bot Reply:</strong> Set up automated responses to handle customer queries instantly.<br>
-										<strong>• Send Unlimited Messages:</strong> Reach out to your audience without any limits on the number of
-										messages.<br>
+										<strong>• Send Unlimited Messages:</strong> Reach out to your audience without any limits on the number of messages.<br>
 										<strong>• AI ChatBot:</strong> Utilize advanced AI chatbots to handle customer interactions efficiently.<br>
-										<strong>• Complete Delivery Report:</strong> Get detailed reports on message delivery status to track and
-										optimize your communication strategy.
+										<strong>• Complete Delivery Report:</strong> Get detailed reports on message delivery status to track and optimize your communication strategy.
 									</p>
-									
-                                </div>
-                            </li>
-                            <li>
-								<h3 style="text-align: center; justify-content: center;">Billing Systems</h3>
-                                <div class="project-item">
-                                    <img src="images/portfolio/Invoice.jpg" alt="">
-                                    <p style="text-align: center; justify-content: center; margin-top: 35px;">Streamline your financial operations with our comprehensive Billing Systems. Designed for
-										accuracy and efficiency, our billing solutions help you manage your invoicing and payment
-										processes seamlessly
-									   </p>
-									   <h1>Features</h1>
-									   <p>
-										<strong>• Automated Invoicing:</strong> Generate and send invoices automatically to your clients, reducing
-										manual effort.<br>
+								</div>
+							</li>
+							<li>
+								<h3 style="text-align: center;">Billing Systems</h3>
+								<div class="project-item">
+									<img src="images/portfolio/Invoice.jpg" alt="Billing Systems">
+									<p style="text-align: center; margin-top: 35px;">
+										Streamline your financial operations with our comprehensive Billing Systems. Designed for accuracy and efficiency, our billing solutions help you manage your invoicing and payment processes seamlessly.
+									</p>
+									<h1>Features</h1>
+									<p>
+										<strong>• Automated Invoicing:</strong> Generate and send invoices automatically to your clients, reducing manual effort.<br>
 										<strong>• Payment Tracking:</strong> Keep track of all payments and outstanding invoices in one place.<br>
-										<strong>• Multiple Payment Options:</strong> Offer your clients various payment methods for their
-										convenience.<br>
+										<strong>• Multiple Payment Options:</strong> Offer your clients various payment methods for their convenience.<br>
 										<strong>• Recurring Billing:</strong> Set up recurring billing for subscription-based services.<br>
-										<strong>• Detailed Reports:</strong> Access detailed financial reports to gain insights into your business’s
-										financial health.<br>
-										<strong>• Secure Transactions:</strong> Ensure the security of all financial transactions with advanced
-										encryption technologies.
+										<strong>• Detailed Reports:</strong> Access detailed financial reports to gain insights into your business’s financial health.<br>
+										<strong>• Secure Transactions:</strong> Ensure the security of all financial transactions with advanced encryption technologies.
 									</p>
-									
-                                </div>
-                            </li>
-                            <li>
-								<h3 style="text-align: center; justify-content: center;">Web Development and Hosting</h3>
-                                <div class="project-item">
-                                    <img src="images/portfolio/web design.jpg" alt="">
-                                    <p style="text-align: center; justify-content: center; margin-top: 35px;">Build and maintain a powerful online presence with our Web Development and Hosting
-										services. Our team of experts will create a website that not only looks great but also performs
-										flawlessly.
-									   </p>
-									   <h1>Features</h1>
-									   <p>
+								</div>
+							</li>
+							<li>
+								<h3 style="text-align: center;">Web Development and Hosting</h3>
+								<div class="project-item">
+									<img src="images/portfolio/web design.jpg" alt="Web Development and Hosting">
+									<p style="text-align: center; margin-top: 35px;">
+										Build and maintain a powerful online presence with our Web Development and Hosting services. Our team of experts will create a website that not only looks great but also performs flawlessly.
+									</p>
+									<h1>Features</h1>
+									<p>
 										<strong>• Custom Website Design:</strong> Get a website tailored to your brand’s unique needs and aesthetic.<br>
-										<strong>• Responsive Design:</strong> Ensure your site looks and works perfectly on all devices, from desktops
-										to smartphones.<br>
-										<strong>• E-commerce Solutions:</strong> Develop a robust online store with secure payment gateways and
-										user-friendly interfaces.<br>
-										<strong>• Website Maintenance:</strong> Keep your website updated and secure with our ongoing
-										maintenance services.<br>
-										<strong>• Reliable Hosting:</strong> Benefit from our secure and high-performance hosting solutions, ensuring
-										your site is always online and fast.<br>
-										<strong>• SEO Optimization:</strong> Optimize your website for search engines to improve visibility and attract
-										more visitors.
+										<strong>• Responsive Design:</strong> Ensure your site looks and works perfectly on all devices, from desktops to smartphones.<br>
+										<strong>• E-commerce Solutions:</strong> Develop a robust online store with secure payment gateways and user-friendly interfaces.<br>
+										<strong>• Website Maintenance:</strong> Keep your website updated and secure with our ongoing maintenance services.<br>
+										<strong>• Reliable Hosting:</strong> Benefit from our secure and high-performance hosting solutions, ensuring your site is always online and fast.<br>
+										<strong>• SEO Optimization:</strong> Optimize your website for search engines to improve visibility and attract more visitors.
 									</p>
-									
-                                </div>
-                            </li>
-                            <li>
-								<h3 style="text-align: center; justify-content: center;">Databases</h3>
-                                <div class="project-item">
-                                    <img src="images/portfolio/databases.jpg" alt="">
-                                    <p style="text-align: center; justify-content: center; margin-top: 35px;">Manage your data efficiently with our robust Database solutions. We offer scalable and
-										secure database services to meet the needs of your growing business.
-									   </p>
-									   <h1>Features</h1>
-									   <p>
-										<strong>• Database Design and Development:</strong> Create a custom database tailored to your business
-										requirements.<br>
-										<strong>• Database Management:</strong> Ensure optimal performance and security of your databases with
-										our management services.<br>
-										<strong>• Data Migration:</strong> Seamlessly migrate your data from existing systems to our advanced
-										database solutions.<br>
+								</div>
+							</li>
+							<li>
+								<h3 style="text-align: center;">Databases</h3>
+								<div class="project-item">
+									<img src="images/portfolio/databases.jpg" alt="Databases">
+									<p style="text-align: center; margin-top: 35px;">
+										Manage your data efficiently with our robust Database solutions. We offer scalable and secure database services to meet the needs of your growing business.
+									</p>
+									<h1>Features</h1>
+									<p>
+										<strong>• Database Design and Development:</strong> Create a custom database tailored to your business requirements.<br>
+										<strong>• Database Management:</strong> Ensure optimal performance and security of your databases with our management services.<br>
+										<strong>• Data Migration:</strong> Seamlessly migrate your data from existing systems to our advanced database solutions.<br>
 										<strong>• Backup and Recovery:</strong> Protect your data with our reliable backup and recovery solutions.<br>
-										<strong>• Data Analytics:</strong> Leverage powerful analytics tools to gain insights and make data-driven
-										decisions.<br>
-										<strong>• Scalability:</strong> Easily scale your database as your business grows, ensuring continuous
-										performance and reliability.
+										<strong>• Data Analytics:</strong> Leverage powerful analytics tools to gain insights and make data-driven decisions.<br>
+										<strong>• Scalability:</strong> Easily scale your database as your business grows, ensuring continuous performance and reliability.
 									</p>
-									
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div><!-- Additional Project slider end -->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- Custom Navigation Arrows -->
+					<div class="custom-navigation">
+						<a href="#" class="flex-prev" style="background-color: red; color:#fff; ">Prev</a>
+						<a href="#" class="flex-next" style="background-color: red; color:#fff">Next</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Additional Project slider end -->
 
     </div><!-- Container end -->
 </section><!-- Portfolio item end -->
@@ -558,9 +675,10 @@
 				</div>
           <div class="row">
             <div class="col-md-12 text-center">
-              <div class="copyright-info">
-                © Copyright 2024 - All Rights Reserved
-              </div>
+                <div class="copyright-info">
+					HARK - Digital Marketing Agency &#169; 2024 Website Developed & Maintenance By
+					<a href="https://www.booleanbraintechnologies.com" style="color:#dd4b39" target="_blank"> Boolean Brain Technologies</a>
+				  </div>
             </div>
           </div>
           <!--/ Row end -->
@@ -578,6 +696,13 @@
         <!--/ Container end -->
       </section>
       <!--/ Copyright end -->
+	  <div class="icon-bars">
+		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="twitter"><i class="fa fa-whatsapp"></i></a>
+		<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		<a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+		<a href="#" class="google"><i class="fa fa-instagram"></i></a>
+	  </div>
 
 	<!-- Javascript Files
 	================================================== -->
@@ -612,16 +737,34 @@
 	<!-- Template custom -->
 	<script type="text/javascript" src="js/custom.js"></script>
 	
-		<script>
-    $(document).ready(function(){
-        $('.flexportfolio').flexslider({
-            animation: "slide"
-        });
-        $('.flexproject').flexslider({
-            animation: "slide"
-        });
-    });
-</script>
+	<script>
+		$(document).ready(function(){
+			$('.flexproject').flexslider({
+				animation: "slide",
+				controlNav: false,
+				directionNav: false,
+				slideshow: false,
+				prevText: "Prev",
+				nextText: "Next",
+				manualControls: ".custom-navigation a",
+				start: function(slider){
+					$('body').removeClass('loading');
+				}
+			});
+	
+			// Custom Navigation
+			$('.custom-navigation a.flex-prev').on('click', function(){
+				$('.flexproject').flexslider('prev');
+				return false;
+			});
+	
+			$('.custom-navigation a.flex-next').on('click', function(){
+				$('.flexproject').flexslider('next');
+				return false;
+			});
+		});
+	</script>
+	
 	
 	</div><!-- Body inner end -->
 </body>
