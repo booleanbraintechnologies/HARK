@@ -147,10 +147,23 @@
     margin-bottom: 30px;
 }
 
-/* Isotope Filter Styling */
+/* Isotope Filter Styling
 .isotope-nav {
     margin-bottom: 30px;
+} */
+
+/* Add this to your stylesheet (e.g., style.css) */
+.isotope-item {
+    margin-bottom: 20px; /* Adjust as needed for vertical spacing */
+    padding: 10px; /* Adjust as needed for spacing around the items */
 }
+
+/* Optional: Add a little more space between items horizontally */
+.isotope-item .grid {
+    margin: 0 auto; /* Center the items */
+    padding: 10px; /* Adjust as needed for inner padding */
+}
+
 
 .isotope-nav ul {
     list-style: none;
@@ -571,139 +584,124 @@
 	
    
 	<!-- Portfolio start -->
-	<section id="portfolio" class="portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 heading">
-					<span class="title-icon "><i class="fa fa-suitcase"></i></span>
-					<h2 class="title classic">Our Awesome Work</h2>
-				</div>
-			</div> <!-- Title row end -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <span class="title-icon"><i class="fa fa-suitcase"></i></span>
+                <h2 class="title classic">Our PRODUCTS</h2>
+            </div>
+        </div> <!-- Title row end -->
 
-			<!--Isotope filter start -->
-			<div class="row text-right">
-				<div class="isotope-nav" data-isotope-nav="isotope">
-					<ul>
-						<li><a href="#" class="active" data-filter="*">All</a></li>
-						<li><a href="#" data-filter=".web-design">Verified API's</a></li>
-						<li><a href="#" data-filter=".development">Billing Systems</a></li>
-						<li><a href="#" data-filter=".joomla">Development</a></li>
-						<li><a href="#" data-filter=".wordpress">Databases</a></li>
-					</ul>
-				</div>
-			</div><!-- Isotope filter end -->
-		</div>
-		
-		<div class="container-fluid">
-			<div class="row">
-				<div id="isotope" class="isotope">
-					<div class="col-sm-3 web-design isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/api.jpeg" alt="" style="height:100%;">
-								<figcaption>
-									<h3>META Verified Whatsapp API</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg1.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>			
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+        <!-- Isotope filter start -->
+        <div class="row text-right">
+            <div class="isotope-nav" data-isotope-nav="isotope">
+                <ul>
+                    <li><a href="#" class="active" data-filter="*">All</a></li>
+                    <li><a href="#" data-filter=".web-design">Verified API's</a></li>
+                    <li><a href="#" data-filter=".development">Billing Systems</a></li>
+                    <li><a href="#" data-filter=".joomla">Development</a></li>
+                    <li><a href="#" data-filter=".wordpress">Databases</a></li>
+                </ul>
+            </div>
+        </div><!-- Isotope filter end -->
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div id="isotope" class="isotope">
+                <div class="col-sm-3 web-design isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/api.jpeg" alt="" style="height:100%;">
+                            <figcaption>
+                                <h3>META Verified Whatsapp API</h3>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 development isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/Invoice.jpg" alt="">
-								<figcaption>
-									<h3>Automated Invoicing</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg2.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>				
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+                <div class="col-sm-3 development isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/Invoice.jpg" alt="">
+                            <figcaption>
+                                <h3>Automated Invoicing</h3>
+                            </figcaption>				
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 joomla isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/web design.jpg" alt="">
-								<figcaption>
-									<h3>Custom Website Design</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg3.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>				
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+                <div class="col-sm-3 joomla isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/web design.jpg" alt="">
+                            <figcaption>
+                                <h3>Custom Website Design</h3>
+                            </figcaption>				
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 wordpress isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/databases.jpg" alt="">
-								<figcaption>
-									<h3>Database Management</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg4.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>					
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+                <div class="col-sm-3 wordpress isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/databases.jpg" alt="">
+                            <figcaption>
+                                <h3>Database Management</h3>
+                            </figcaption>					
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 joomla isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/e-commerce.png" alt="">
-								<figcaption>
-									<h3>E-commerce Solutions</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg5.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>					
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+                <div class="col-sm-3 joomla isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/e-commerce.png" alt="">
+                            <figcaption>
+                                <h3>E-commerce Solutions</h3>
+                            </figcaption>					
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 development isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/mastercard.jpg" alt="">
-								<figcaption>
-									<h3>Payment Tracking</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg1.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>					
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+                <div class="col-sm-3 development isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/mastercard.jpg" alt="">
+                            <figcaption>
+                                <h3>Payment Tracking</h3>
+                            </figcaption>					
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 development isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/trans.jpg" alt="">
-								<figcaption>
-									<h3>Secure Transaction</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg2.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>					
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
+                <div class="col-sm-3 development isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/trans.jpg" alt="">
+                            <figcaption>
+                                <h3>Secure Transaction</h3>
+                            </figcaption>					
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
 
-					<div class="col-sm-3 development isotope-item">
-						<div class="grid">
-							<figure class="effect-oscar">
-								<img src="images/portfolio/reports.jpg" alt="">
-								<figcaption>
-									<h3>Detailed Reports</h3>
-									<a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-									<!-- <a class="view icon-pentagon" data-rel="prettyPhoto" href="images/portfolio/portfolio-bg3.jpg"><i class="fa fa-search"></i></a>             -->
-								</figcaption>					
-							</figure>
-						</div>
-					</div><!-- Isotope item end -->
-				</div><!-- Isotope content end -->
-			</div><!-- Content row end -->
-		</div><!-- Container end -->
-	</section><!-- Portfolio end -->
+                <div class="col-sm-3 development isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="images/portfolio/reports.jpg" alt="">
+                            <figcaption>
+                                <h3>Detailed Reports</h3>
+                            </figcaption>					
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+            </div><!-- Isotope content end -->
+        </div><!-- Content row end -->
+    </div><!-- Container end -->
+</section><!-- Portfolio end -->
+
 
 	<!-- Counter Strat -->
 	<!-- <section class="ts_counter no-padding">
@@ -1467,7 +1465,7 @@
                 We are here to assist you with all your digital marketing needs.
                 Our team is ready to provide you with tailored solutions to help
                 your business thrive online. Feel free to reach out to us
-                through the following channels:
+                through the following channels
               </p>
               <!-- <div class="img-gallery">
                 <div class="img-container">
@@ -1509,18 +1507,18 @@
                 We are here to assist you with all your digital marketing needs.
                 Our team is ready to provide you with tailored solutions to help
                 your business thrive online. Feel free to reach out to us
-                through the following channels:
+                through the following channels
               </p> -->
               <!-- <h4>Address</h4>
 						<p style="color: white;">1102 Saint Marys, Junction City, KS</p> -->
               <div class="row">
                 <div class="col-md-6">
                   <h4>Email:</h4>
-                  <p style="color: white">info@harkitsolutions.com</p>
+                  <p style="color: white">info@harkaimarketing.com</p>
                 </div>
                 <div class="col-md-6" style="margin-left: 2px">
                   <h4>Phone No.</h4>
-                  <p style="color: white">8897414949</p>
+                  <p style="color: white">+91 8522832424</p>
                 </div>
                 <div class="col-md-11" style="margin-right: 2px">
                   <h4>Business Hours:</h4>
@@ -1555,22 +1553,22 @@
 								<a title="Twitter" href="#">
 									<!-- <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span> -->
 								</a>
-								<a title="Facebook" href="#">
+								<a title="Facebook" href="https://www.facebook.com/profile.php?id=61562770657112&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true">
 									<span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
 								</a>
-								<a title="Whatsapp" href="#">
+								<a title="Whatsapp" href="https://wa.me/+918522832424?text=">
 									<span class="icon-pentagon wow bounceIn"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
 								</a>
-								<a title="linkedin" href="#">
+								<a title="linkedin" href="https://www.linkedin.com/company/hark-marketing-agency/">
 									<span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
 								</a>
-								<a title="YoutTube" href="#">
+								<a title="YoutTube" href="https://youtube.com/@harkaimarketing?si=UfLVW5blW4V6A9GW">
 									<span class="icon-pentagon wow bounceIn"><i class="fa fa-youtube" aria-hidden="true"></i></span>
 								</a>
 								<a title="Skype" href="#">
 									<!-- <span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span> -->
 								</a>
-								<a title="Instagram" href="#">
+								<a title="Instagram" href="https://www.instagram.com/hark.india/">
 									<span class="icon-pentagon wow bounceIn"> <i class="fa fa-instagram" aria-hidden="true"></i></span>
 								</a>
 							</li>
@@ -1601,11 +1599,11 @@
       </section>
       <!--/ Copyright end -->
 	  <div class="icon-bars">
-		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-		<a href="#" class="twitter"><i class="fa fa-whatsapp"></i></a>
-		<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-		<a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
-		<a href="#" class="google"><i class="fa fa-instagram"></i></a>
+		<a href="https://www.facebook.com/profile.php?id=61562770657112&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" class="facebook"><i class="fa fa-facebook"></i></a>
+		<a href="https://wa.me/+918522832424?text=" class="twitter"><i class="fa fa-whatsapp"></i></a>
+		<a href="https://www.instagram.com/hark.india/" class="google"><i class="fa fa-instagram"></i></a>
+		<a href="https://www.linkedin.com/company/hark-marketing-agency/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		<a href="https://youtube.com/@harkaimarketing?si=UfLVW5blW4V6A9GW" class="youtube"><i class="fa fa-youtube"></i></a>
 	  </div>
 
 	<!-- Javascript Files
