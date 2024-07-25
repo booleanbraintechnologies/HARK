@@ -303,6 +303,69 @@
   background: #bb0000;
   color: white;
 }
+/* Ensures the images maintain aspect ratio and cover the slider area */
+.slider-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Centers text and buttons in the middle */
+/* .cd-full-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; */
+/* } */ */
+
+/* Optional: adjust margins if necessary */
+.cd-full-width h2, 
+.cd-full-width p, 
+.cd-full-width .cd-btn {
+    margin-top: 10px; /* Adjust this value as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cd-full-width h2 {
+        font-size: 1.5rem;
+    }
+
+    .cd-full-width p {
+        font-size: 1rem;
+    }
+
+    .cd-full-width .cd-btn {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cd-full-width {
+        padding: 0 20px;
+    }
+
+    .cd-full-width h2 {
+        font-size: 2rem;
+    }
+
+    .cd-full-width p {
+        font-size: 1.25rem;
+    }
+
+    .cd-full-width .cd-btn {
+        font-size: 1rem;
+    }
+}
+
+
+
 </style>
 </head>
 	
@@ -451,83 +514,67 @@
 	</header><!--/ Header end -->
 
 	<!-- Slider start -->
-	<section id="home" class="no-padding">	
-    	<div id="main-slide" class="cd-hero">
+	<section id="home" class="no-padding"> 
+		<div id="main-slide" class="cd-hero">
 			<ul class="cd-hero-slider">
 				<li class="selected">
 					<div class="overlay2">
-						<img class="" src="images/slider/bg1.jpg" alt="slider">
+						<img class="slider-image" src="images/slider/bg1.jpg" alt="slider">
 					</div>
 					<div class="cd-full-width">
 						<h2>Need To Invent The Future!</h2>
-						<p>Embracing cutting-edge trends and technologies to stay ahead of the
-							curve.
-							</p>
-						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch
-						</a>
-						<!-- <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a> -->
-					</div> <!-- .cd-full-width -->
+						<p>Embracing cutting-edge trends and technologies to stay ahead of the curve.</p>
+						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
+					</div>
 				</li>
 				<li>
 					<div class="overlay2">
-						<img class="" src="images/slider/bg2.jpg" alt="slider">
+						<img class="slider-image" src="images/slider/bg2.jpg" alt="slider">
 					</div>
 					<div class="cd-full-width">
 						<h2>How Big Can You Dream?</h2>
-						<p>Pursuing perfection in every facet of our work!!
-						</p>
+						<p>Pursuing perfection in every facet of our work!!</p>
 						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
-					</div> <!-- .cd-half-width -->
-
-					<!-- <div class="cd-half-width cd-img-container " >
-						<img src="images/slider/Fotoram.io.jpg" alt="">
-					</div> -->
-					 <!-- .cd-half-width.cd-img-container -->
+					</div>
 				</li>
 				<li>
 					<div class="overlay2">
-						<img class="" src="images/slider/bg3.jpg" alt="slider">
+						<img class="slider-image" src="images/slider/bg3.jpg" alt="slider">
 					</div>
 					<div class="cd-half-width cd-img-container img-right">
 						<img src="images/slider/bg-thumb2.png" alt="">
-					</div> <!-- .cd-half-width.cd-img-container -->
+					</div>
 					<div class="cd-half-width">
 						<h2>Collaboration sparks innovation</h2>
-						<p>Partnering closely with clients to understand their goals and
-							challenges.
-							</p>
-							<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
-					</div> <!-- .cd-half-width -->
+						<p>Partnering closely with clients to understand their goals and challenges.</p>
+						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
+					</div>
 				</li>
-				<li class="selected">
+				<li>
 					<div class="overlay2">
-						<img class="" src="images/slider/video-replace-mobile.jpg" alt="slider">
+						<img class="slider-image" src="images/slider/video-replace-mobile.jpg" alt="slider">
 					</div>
 					<div class="cd-full-width">
 						<h2>WE ARE HERE TO MAKE IT HAPPEN</h2>
-						<p>Designing unique solutions that captivate and engage.
-						</p>
+						<p>Designing unique solutions that captivate and engage.</p>
 						<a href="contact.html" class="btn btn-primary white cd-btn">Get in Touch</a>
-					</div> <!-- .cd-full-width -->
+					</div>
 				</li>
-			
-				
-			</ul> <!--/ cd-hero-slider -->
-
-		<div class="cd-slider-nav">
-			<nav>
-				<span class="cd-marker item-1"></span>
-				<ul>
-					<li class="selected"><a href="#0"><i class="fa fa-bicycle"></i> Invent</a></li>
-					<li><a href="#0"><i class="fa fa-hotel"></i> Dream</a></li>
-					<li><a href="#0"><i class="fa fa-android"></i> Tech</a></li>
-					<li class="video"><a href="#0"><i class="fa fa-video-camera"></i>Artsy</a></li>
-				</ul>
-			</nav> 
-		</div> <!-- .cd-slider-nav -->
-
-		</div><!--/ Main slider end -->    	
-    </section> <!--/ Slider end -->
+			</ul>
+			<div class="cd-slider-nav">
+				<nav>
+					<span class="cd-marker item-1"></span>
+					<ul>
+						<li><a href="#0"><i class="fa fa-bicycle"></i> Invent</a></li>
+						<li><a href="#0"><i class="fa fa-hotel"></i> Dream</a></li>
+						<li><a href="#0"><i class="fa fa-android"></i> Tech</a></li>
+						<li><a href="#0"><i class="fa fa-video-camera"></i> Artsy</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</section>
+	
 
 
     <!-- Service box start -->
